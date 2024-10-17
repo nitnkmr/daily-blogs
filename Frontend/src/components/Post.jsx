@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form"
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../baseUrl";
 
-const BASE_URL = "http://localhost:4001";
+
 
 const Post = () => {
     const { register, handleSubmit } = useForm()
