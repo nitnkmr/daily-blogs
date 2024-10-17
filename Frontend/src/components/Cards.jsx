@@ -1,0 +1,31 @@
+import React from "react";
+
+const IMG = "https://www.reliablesoft.net/wp-content/uploads/2019/12/free-images-for-blogs.jpg"
+
+function Cards({ item }) {
+  return (
+    <>
+      <div className="mt-4 my-3 p-3">
+        <div className="card w-92 bg-base-100 shadow-xl hover:scale-105 duration-200 dark:bg-slate-900 dark:text-white dark:border">
+          <figure>
+            <img src={IMG} alt="img" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">
+              {item.name} Some bid events are about to
+            </h2>
+            <p className="line-clamp-2 text-sm">{item.description|| "cursor-pointer px-1 py-1 h-[14] rounded-full border-[2px] hover:bg-pink-500 hover:text-white duration-200"}</p>
+            <div className="card-actions justify-between">
+
+              <div className=" cursor-pointer border-blue-500 px-2 py-1 rounded-full border-[2px] hover:bg-blue-500 hover:text-white duration-200">
+                Read Full Article
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Cards;
