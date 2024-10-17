@@ -1,27 +1,30 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { BASE_URL } from '../baseUrl.js'
+import toast from 'react-hot-toast'
 
 const Blogs = () => {
+    console.log(BASE_URL);
+    
 
     const [blogs, setBlogs] =useState([])
-    // const url =  import.meta.env.dev.BASE_URI
-    const BASE_URL = 'https://daily-blogger-be.onrender.com'
-    
-    // console.log(url)
-
     useEffect(() => {
         const getBlogs = async () => {
           try {
             const res = await axios.get(BASE_URL+"/blog");
-            console.log(res.data);
+         
             setBlogs(res.data);
           } catch (error) {
             console.log(error);
           }
         };
         getBlogs();
-        console.log(blogs)
+           toast.promise(getBlogs(), {
+                loading: 'Loading',
+                success: 'Loaded',
+                error: 'Error when fetching',
+              });
       }, []);
     return (
         <>

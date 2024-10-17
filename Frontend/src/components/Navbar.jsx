@@ -45,13 +45,13 @@ function Navbar({auth}) {
         <Link to="/post" className="border bg-slate-300 p-2 dark:bg-slate-950 dark:text-white dark:border">POST YOUR ARTICLE</Link>
       </li>
       <li>
-        <Link to="/" className="dark:text-white mx-1">Home</Link>
+        <Link to="/" className="dark:text-white mx-1 dark:bg-slate-900">Home</Link>
       </li>
       <li>
-        <Link to="/blogs" className="dark:text-white mx-1">Blogs</Link>
+        <Link to="/blogs" className="dark:text-white mx-1 dark:bg-slate-900">Blogs</Link>
       </li>
       <li>
-        <Link to="/account" className="dark:text-white mx-1">Account</Link>
+        <Link to="/account" className="dark:text-white mx-1 dark:bg-slate-900">Account</Link>
       </li>
     </>
   );
@@ -100,7 +100,7 @@ function Navbar({auth}) {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                className="menu menu-sm dropdown-content mt-3 z-[1] gap-2 p-2 shadow bg-base-100 rounded-box w-52"
               >
                 {navItems}
               </ul>

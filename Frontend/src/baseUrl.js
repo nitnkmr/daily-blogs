@@ -1,0 +1,1 @@
+export const BASE_URL= "https://daily-blogs-3b7n.onrender.com"
